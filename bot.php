@@ -21,12 +21,10 @@ if ($message == "/start") {
 } elseif ($message == "/help") {
     $response = "Available commands:\n/start - Start the bot\n/help - Show this help message";
 } elseif ($message == "/productos") {
-    $response = "Here are the available products:\n1. /Product A\n2. /Product B\n3. /Product C";
-} elseif ($message == "/Product A") {
+    $response = "Here are the available products:\n1. /ProductA\n2. /ProductB\n3. /ProductC";
+} elseif ($message == "/ProductA" || $message == "/ProductB") {
     $response = "Product A is a great choice! It costs $10.";
-} elseif ($message == "/Product B") {
-    $response = "Product B is a great choice! It costs $20.";
-} elseif ($message == "/Product C") {
+} elseif ($message == "/ProductC") {
     $response = "Product C is a great choice! It costs $30.";
 } else {
     $response = "Unknown command. Use /help to see available commands.";
