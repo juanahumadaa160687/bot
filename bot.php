@@ -33,7 +33,7 @@ if ($message == "/start") {
 } elseif ($message == "/detergente" || $message == "/lavaloza") {
     $response = "El producto que has elegido está en el pasillo 5.";
 } else {
-    $response = "Unknown command. Use /help to see available commands.";
+    $response = "No entiendo tu pregunta. Usa /ayuda para ver los comandos disponibles.";
 }
 sendMessage($chat_id, $response);
 
