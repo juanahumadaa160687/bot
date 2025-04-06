@@ -22,7 +22,7 @@ switch ($message) {
         break;
 
     case "/productos":
-        $response = "Productos disponibles:\n1. /Carne \n2. /Queso\n3. /Jamon\n4. Cereal\n5. Leche\n6. Yogur\n7. Bebidas\n8. Jugos\n9. Pan\n10. Pasteles\n11. Tortas\n12. Detergente\n13. Lavaloza";
+        $response = "Productos disponibles:\n1. /Carne \n2. /Queso\n3. /Jamon\n4. /Cereal\n5. /Leche\n6. /Yogur\n7. /Bebidas\n8. /Jugos\n9. /Pan\n10. /Pasteles\n11. /Tortas\n12. /Detergente\n13. /Lavaloza";
         sendMessage($chat_id, $response);
         break;
 
