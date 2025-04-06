@@ -16,49 +16,26 @@ function sendMessage($chat_id, string $response)
     file_get_contents($url);
 }
 
-switch ($message) {
-    case "/start":
-        $response = "Bienvenido a ShopBot!\n\nPara Comenzar, por favor escriba el producto que desea consultar o escriba /productos para ver los productos disponibles.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/productos":
-        $response = "Productos disponibles:\n1. /carne \n2. /queso\n3. /jamon\n4. /cereal\n5. /leche\n6. /yogur\n7. /bebidas\n8. /jugos\n9. /pan\n10. /pasteles\n11. /tortas\n12. /detergente\n13. /lavaloza";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/ayuda":
-        $response = "Opciones disponibles:\n/start - Inicia el bot\n/ayuda - Muestra la ayuda\n/productos - Muestra los productos disponibles";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/carne" || "/queso" || "/jamon":
-        $response = "El producto que seleccionaste se encuentra en el pasillo 1. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/cereal" || "/leche" || "/yogur":
-        $response = "El producto que seleccionaste se encuentra en el pasillo 2. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/bebidas" || "/jugos":
-        $response = "El producto que seleccionaste se encuentra en el pasillo 3. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/pan" || "/pasteles" || "/tortas":
-        $response = "El producto que seleccionaste se encuentra en el pasillo 4. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/detergente" || "/lavaloza":
-        $response = "El producto que seleccionaste se encuentra en el pasillo 5. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    default:
-        $response = "No entiendo lo que dices.\n\nEscribe /ayuda para ver los comandos disponibles.";
-        break;
+if ($message == "/start") {
+    $response = "Welcome to the bot! Use /help to see available commands.";
+    sendMessage($chat_id, $response);
+} elseif ($message == "/help") {
+    $response = "Available commands:\n/start - Start the bot\n/help - Show this help message";
+    sendMessage($chat_id, $response);
+} elseif ($message == "/productos") {
+    $response = "Here are the available products:\n1. /Product A\n2. /Product B\n3. /Product C";
+    sendMessage($chat_id, $response);
+} elseif ($message == "/Product A") {
+    $response = "Product A is a great choice! It costs $10.";
+    sendMessage($chat_id, $response);
+} elseif ($message == "/Product B") {
+    $response = "Product B is a great choice! It costs $20.";
+    sendMessage($chat_id, $response);
+} elseif ($message == "/Product C") {
+    $response = "Product C is a great choice! It costs $30.";
+    sendMessage($chat_id, $response);
+} else {
+    $response = "Unknown command. Use /help to see available commands.";
+    sendMessage($chat_id, $response);
 }
 
