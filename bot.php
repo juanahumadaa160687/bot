@@ -22,12 +22,33 @@ switch ($message) {
         break;
 
     case "/productos":
-        $response = "Productos disponibles:\n1. Carne \n2. Queso\n3. Jamon\n4. Cereal\n5. Leche\n6. Yogur\n7. Bebidas\n8. Jugos\n9. Pan\n10. Pasteles\n11. Tortas\n12. Detergente\n13. Lavaloza";
+        $response = "Productos disponibles:\n1. /Carne \n2. /Queso\n3. /Jamon\n4. Cereal\n5. Leche\n6. Yogur\n7. Bebidas\n8. Jugos\n9. Pan\n10. Pasteles\n11. Tortas\n12. Detergente\n13. Lavaloza";
         sendMessage($chat_id, $response);
         break;
 
-   case "Carne" || "Queso" || "Jamon":
+   case "Carne" || "Queso" || "Jamon" || "/Carne" || "/Queso" || "/Jamon":
         $response = "El producto que seleccionaste se encuentra en el pasillo 1. \n\nSi deseas ver más productos, escribe /productos.";
+        sendMessage($chat_id, $response);
+        break;
+
+    case "Cereal" || "Leche" || "Yogur":
+        $response = "El producto que seleccionaste se encuentra en el pasillo 2. \n\nSi deseas ver más productos, escribe /productos.";
+        sendMessage($chat_id, $response);
+        break;
+
+    case "Bebidas" || "Jugos":
+
+        $response = "El producto que seleccionaste se encuentra en el pasillo 3. \n\nSi deseas ver más productos, escribe /productos.";
+        sendMessage($chat_id, $response);
+        break;
+
+    case "Pan" || "Pasteles" || "Tortas":
+        $response = "El producto que seleccionaste se encuentra en el pasillo 4. \n\nSi deseas ver más productos, escribe /productos.";
+        sendMessage($chat_id, $response);
+        break;
+
+    case "Detergente" || "Lavaloza":
+        $response = "El producto que seleccionaste se encuentra en el pasillo 5. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
 
