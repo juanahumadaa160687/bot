@@ -1,7 +1,8 @@
 <?php
 header("Pragma: no-cache");
 
-$path = "https://api.telegram.org/bot7946282665:AAFXehtvWJcg1AlvPEy-Hk1HrUAT_m2Jsmw";
+$token = $_ENV["TELEGRAM_BOT_TOKEN"];
+$path = "https://api.telegram.org/bot".$token;
 
 $update = json_decode(file_get_contents("php://input"));
 
@@ -22,32 +23,31 @@ switch ($message) {
         break;
 
     case "/productos":
-        $response = "Productos disponibles:\n1. /Carne \n2. /Queso\n3. /Jamon\n4. /Cereal\n5. /Leche\n6. /Yogur\n7. /Bebidas\n8. /Jugos\n9. /Pan\n10. /Pasteles\n11. /Tortas\n12. /Detergente\n13. /Lavaloza";
+        $response = "Productos disponibles:\n1. /carne \n2. /queso\n3. /jamon\n4. /cereal\n5. /leche\n6. /yogur\n7. /bebidas\n8. /jugos\n9. /pan\n10. /pasteles\n11. /tortas\n12. /detergente\n13. /lavaloza";
         sendMessage($chat_id, $response);
         break;
 
-   case "/Carne":
+   case "/carne" || "/queso" || "/jamon":
         $response = "El producto que seleccionaste se encuentra en el pasillo 1. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
 
-    case "/Cereal" || "/Leche" || "/Yogur":
+    case "/cereal" || "/leche" || "/yogur":
         $response = "El producto que seleccionaste se encuentra en el pasillo 2. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
 
-    case "/Bebidas" || "/Jugos":
-
+    case "/bebidas" || "/jugos":
         $response = "El producto que seleccionaste se encuentra en el pasillo 3. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
 
-    case "/Pan" || "/Pasteles" || "/Tortas":
+    case "/pan" || "/pasteles" || "/tortas":
         $response = "El producto que seleccionaste se encuentra en el pasillo 4. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
 
-    case "/Detergente" || "/Lavaloza":
+    case "/detergente" || "/lavaloza":
         $response = "El producto que seleccionaste se encuentra en el pasillo 5. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
