@@ -32,7 +32,7 @@ switch ($message) {
         break;
 
     default:
-        $response = "Unknown command. Use /help to see available commands.";
+        $response = "No entiendo lo que dices.\n\nEscribe /help para ver los comandos disponibles.";
         break;
 }
 
