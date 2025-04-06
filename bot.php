@@ -26,7 +26,7 @@ switch ($message) {
         sendMessage($chat_id, $response);
         break;
 
-   case "/Carne" || "/Queso" || "/Jamon":
+   case "/Carne":
         $response = "El producto que seleccionaste se encuentra en el pasillo 1. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
