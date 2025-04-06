@@ -1,0 +1,11 @@
+{
+  "config": {
+    "disable-tls": true
+  },
+  "require": {
+    "php": "^7.4 || ^8.2",
+    "vjik/telegram-bot-api": "0.8.0",
+    "ext-json": "*",
+    "ext-curl": "*"
+  }
+}
