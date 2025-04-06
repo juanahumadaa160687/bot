@@ -27,7 +27,12 @@ switch ($message) {
         sendMessage($chat_id, $response);
         break;
 
-   case "/carne" || "/queso" || "/jamon":
+    case "/ayuda":
+        $response = "Opciones disponibles:\n/start - Inicia el bot\n/ayuda - Muestra la ayuda\n/productos - Muestra los productos disponibles";
+        sendMessage($chat_id, $response);
+        break;
+
+    case "/carne" || "/queso" || "/jamon":
         $response = "El producto que seleccionaste se encuentra en el pasillo 1. \n\nSi deseas ver más productos, escribe /productos.";
         sendMessage($chat_id, $response);
         break;
@@ -49,11 +54,6 @@ switch ($message) {
 
     case "/detergente" || "/lavaloza":
         $response = "El producto que seleccionaste se encuentra en el pasillo 5. \n\nSi deseas ver más productos, escribe /productos.";
-        sendMessage($chat_id, $response);
-        break;
-
-    case "/ayuda":
-        $response = "Opciones disponibles:\n/start - Inicia el bot\n/ayuda - Muestra la ayuda\n/productos - Muestra los productos disponibles";
         sendMessage($chat_id, $response);
         break;
 
