@@ -25,14 +25,14 @@ if ($message == "/start") {
 
 } elseif ($message == "/carne" || $message == "/queso" || $message == "/jamon" || $message == "Carne" || $message == "Queso" || $message == "Jamon") {
     $response = "El producto que has elegido está en el pasillo 1. \n\nSi necesitas ver más productos, usa /productos.";
-} elseif ($message == "/leche" || $message == "/yogurt" || $message == "/cereal" || $message == strtolower("Cereal") || $message == strtolower("Leche") || $message == strtolower("Yogurt")) {
+} elseif ($message == "/leche" || $message == "/yogurt" || $message == "/cereal" || $message == "Cereal" || $message == "Leche" || $message == "Yogurt") {
     $response = "El producto que has elegido está en el pasillo 2. \n\nSi necesitas ver más productos, usa /productos.";
-} elseif ($message == "/bebidas" || $message == "/jugos" || $message == strtolower("Bebidas") || $message == strtolower("Jugos"))
+} elseif ($message == "/bebidas" || $message == "/jugos" || $message == "Bebidas" || $message == "Jugos")
 {
     $response = "El producto que has elegido está en el pasillo 3. \n\nSi necesitas ver más productos, usa /productos.";
-} elseif ($message == "/pan" || $message == "/pasteles" || $message == "/tortas" || $message == strtolower("Pan") ||$message == strtolower("Pasteles") || $message == strtolower("Tortas")) {
+} elseif ($message == "/pan" || $message == "/pasteles" || $message == "/tortas" || $message == "Pan" ||$message == "Pasteles" || $message == "Tortas") {
     $response = "El producto que has elegido está en el pasillo 4. \n\nSi necesitas ver más productos, usa /productos.";
-} elseif ($message == "/detergente" || $message == "/lavaloza" || $message == strtolower("Detergente") || $message == strtolower("Lavaloza")) {
+} elseif ($message == "/detergente" || $message == "/lavaloza" || $message == "Detergente" || $message == "Lavaloza") {
     $response = "El producto que has elegido está en el pasillo 5. \n\nSi necesitas ver más productos, usa /productos.";
 }elseif ($message == "/salir"){
     $response = "Gracias por usar ShopBot. ¡Hasta luego!";
