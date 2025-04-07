@@ -17,7 +17,7 @@ function sendMessage($chat_id, string $response)
 }
 
 if ($message == "/start") {
-    $response = "Bienvenido a ShopBot. Escribe el producto que deseas buscar o usa /productos para ver la lista de productos.";
+    $response = "Bienvenido a ShopBot. Escribe el producto que deseas buscar o usa /productos para ver la lista de productos. \n\nSi necesitas ayuda, usa /ayuda.";
 } elseif ($message == "/ayuda") {
     $response = "Comandos disponibles:\n1.- /start - Inicia la conversación\n2.- /ayuda Muestra el menú de ayuda\n3.- /productos  Muestra la lista de productos\n4.- /salir - Termina la conversación\nPara buscar un producto, simplemente escribe su nombre o usa el comando correspondiente. \n\nEjemplo: Carne, Queso, Leche, /Carne, /Queso etc.";
 } elseif ($message == "/productos") {
